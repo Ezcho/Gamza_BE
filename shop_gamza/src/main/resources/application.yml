@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3305/gamza_database?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: uijin-mysql-pw
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100
+    hibernate:
+      ddl-auto: validate
+
+  messages:
+    basename: errors
+
+jwt:
+  header: token
+  issuer: shop_gamza
+  secret-key: EENY5W0eegTf1naQB2eDeyCLl5kRS2b8xa5c4qLdS0hmVjtbvo8tOyhPMcAmtPuQ
+  expiry-seconds: 3600
